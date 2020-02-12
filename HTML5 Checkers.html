@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Author @ Victor Williams -->
+<html>
+<head>
+
+  <title>HTML5 Checkers</title>
+  <script src="./HTML5 Checkers_files/jquery.min.js.download"></script><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+
+::placeholder {
+    opacity: 0.5 !important;
+}</style>
+
+  <link href="./HTML5 Checkers_files/css" rel="stylesheet">
+  <link href="./HTML5 Checkers_files/style.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="hfavicon.png" type="image/x-icon">
+  <script src="./HTML5 Checkers_files/script.js.download"></script>
+</head>
+
+<body style="" data-gr-c-s-loaded="true">
+  <div class="column">
+    <div class="info">
+      <h1>Checkers</h1>
+      <hr>
+      <p>Made by Victor Williams for <a href="http://TUDEV.org/">TUDEV</a> 2017 </p>
+    </div>
+    <div class="stats">
+      <h2>Game Statistics</h2>
+      <div class="wrapper">
+      <div id="player1">
+        <h3>Player 1 (Top)</h3>
+      </div>
+      <div id="player2">
+        <h3>Player 2 (Bottom)</h3>
+      </div>
+      </div>
+
+      <div class="clearfix"></div>
+      <div class="turn" style="background: linear-gradient(to right, transparent 50%, rgb(190, 238, 98) 50%); --darkreader-inline-bgimage:linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #5b830e 50%); --darkreader-inline-bgcolor: initial;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></div>
+      <span id="winner"></span>
+      <button id="cleargame">Restart Game</button>
+    </div>
+  </div>
+
+  <div class="column">
+    <div id="board">
+      <div class="tiles"><div class="tile" id="tile0" style="top:0vmin;left:10vmin;"></div><div class="tile" id="tile1" style="top:0vmin;left:30vmin;"></div><div class="tile" id="tile2" style="top:0vmin;left:50vmin;"></div><div class="tile" id="tile3" style="top:0vmin;left:70vmin;"></div><div class="tile" id="tile4" style="top:10vmin;left:0vmin;"></div><div class="tile" id="tile5" style="top:10vmin;left:20vmin;"></div><div class="tile" id="tile6" style="top:10vmin;left:40vmin;"></div><div class="tile" id="tile7" style="top:10vmin;left:60vmin;"></div><div class="tile" id="tile8" style="top:20vmin;left:10vmin;"></div><div class="tile" id="tile9" style="top:20vmin;left:30vmin;"></div><div class="tile" id="tile10" style="top:20vmin;left:50vmin;"></div><div class="tile" id="tile11" style="top:20vmin;left:70vmin;"></div><div class="tile" id="tile12" style="top:30vmin;left:0vmin;"></div><div class="tile" id="tile13" style="top:30vmin;left:20vmin;"></div><div class="tile" id="tile14" style="top:30vmin;left:40vmin;"></div><div class="tile" id="tile15" style="top:30vmin;left:60vmin;"></div><div class="tile" id="tile16" style="top:40vmin;left:10vmin;"></div><div class="tile" id="tile17" style="top:40vmin;left:30vmin;"></div><div class="tile" id="tile18" style="top:40vmin;left:50vmin;"></div><div class="tile" id="tile19" style="top:40vmin;left:70vmin;"></div><div class="tile" id="tile20" style="top:50vmin;left:0vmin;"></div><div class="tile" id="tile21" style="top:50vmin;left:20vmin;"></div><div class="tile" id="tile22" style="top:50vmin;left:40vmin;"></div><div class="tile" id="tile23" style="top:50vmin;left:60vmin;"></div><div class="tile" id="tile24" style="top:60vmin;left:10vmin;"></div><div class="tile" id="tile25" style="top:60vmin;left:30vmin;"></div><div class="tile" id="tile26" style="top:60vmin;left:50vmin;"></div><div class="tile" id="tile27" style="top:60vmin;left:70vmin;"></div><div class="tile" id="tile28" style="top:70vmin;left:0vmin;"></div><div class="tile" id="tile29" style="top:70vmin;left:20vmin;"></div><div class="tile" id="tile30" style="top:70vmin;left:40vmin;"></div><div class="tile" id="tile31" style="top:70vmin;left:60vmin;"></div></div>
+      <div class="pieces">
+        <div class="player1pieces">
+        <div class="piece" id="0" style="top:0vmin;left:10vmin;"></div><div class="piece" id="1" style="top:0vmin;left:30vmin;"></div><div class="piece" id="2" style="top:0vmin;left:50vmin;"></div><div class="piece" id="3" style="top:0vmin;left:70vmin;"></div><div class="piece" id="4" style="top:10vmin;left:0vmin;"></div><div class="piece" id="5" style="top:10vmin;left:20vmin;"></div><div class="piece" id="6" style="top:10vmin;left:40vmin;"></div><div class="piece" id="7" style="top:10vmin;left:60vmin;"></div><div class="piece" id="8" style="top: 30vmin; left: 0vmin;"></div><div class="piece" id="9" style="top:20vmin;left:30vmin;"></div><div class="piece" id="10" style="top:20vmin;left:50vmin;"></div><div class="piece" id="11" style="top:20vmin;left:70vmin;"></div></div>
+        <div class="player2pieces">
+        <div class="piece" id="12" style="top:50vmin;left:0vmin;"></div><div class="piece" id="13" style="top:50vmin;left:20vmin;"></div><div class="piece" id="14" style="top:50vmin;left:40vmin;"></div><div class="piece" id="15" style="top:50vmin;left:60vmin;"></div><div class="piece" id="16" style="top:60vmin;left:10vmin;"></div><div class="piece" id="17" style="top:60vmin;left:30vmin;"></div><div class="piece" id="18" style="top:60vmin;left:50vmin;"></div><div class="piece" id="19" style="top:60vmin;left:70vmin;"></div><div class="piece" id="20" style="top:70vmin;left:0vmin;"></div><div class="piece" id="21" style="top:70vmin;left:20vmin;"></div><div class="piece" id="22" style="top:70vmin;left:40vmin;"></div><div class="piece" id="23" style="top:70vmin;left:60vmin;"></div></div>
+      </div>
+  </div>
+
+</div>
+</body>
+</html>
